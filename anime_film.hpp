@@ -4,7 +4,9 @@
 class Anime_film{
 
     private:
-        double duzina_filma
+        double duzina_filma;
+    public:
+
 };
 
 #endif // ANIME_FILM_HPP_INCLUDED

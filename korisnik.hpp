@@ -4,6 +4,8 @@
 class Korisnik{
 
     private:
+        string username;
+        string nickname;
         string komentar;
 };
 
