@@ -3,7 +3,7 @@
 
 class Korisnik{
 
-    private:
+    protected:
         string username;
         string nickname;
         string komentar;
