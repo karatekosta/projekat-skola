@@ -14,7 +14,6 @@
 class Anime{
 
     protected:
-        Anime_info anime1;
         Proizvodjac proizvodjac1;
         Ocene ocene1;
         Anime_serija serija1;
@@ -22,7 +21,11 @@ class Anime{
         Zanr zanr1;
         Release release1;
         Anime_facts facts;
+        Korisnik korisnik1;
+        string komentar;
 
+    public:
+        Anime()
 };
 
 #endif // ANIME_HPP_INCLUDED

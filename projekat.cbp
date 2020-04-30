@@ -43,6 +43,7 @@
 		<Unit filename="ocene.hpp" />
 		<Unit filename="proizvodjac.hpp" />
 		<Unit filename="release.hpp" />
+		<Unit filename="sign up.hpp" />
 		<Unit filename="zanr.hpp" />
 		<Extensions>
 			<code_completion />

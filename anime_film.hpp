@@ -15,6 +15,10 @@ class Anime_film: private Anime_info{
             info.zavrseno=false;
 
         }
+        Anime_film(double df, string i, string j, bool z):info(i, j, z){
+                duzina_filma=df;
+
+            }
 
 };
 
