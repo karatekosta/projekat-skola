@@ -23,6 +23,10 @@ class Anime_serija: protected Anime_info{
         int duzina_sezone(){
             return broj_epizoda*duzina_epizode;
         }
+
+        void credits(){
+            duzina_epizode=duzina_epizode+30;
+            }
 };
 
 #endif // ANIME_SERIJA_HPP_INCLUDED
