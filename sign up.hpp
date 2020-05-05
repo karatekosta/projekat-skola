@@ -2,7 +2,7 @@
 #define SIGN_UP_HPP_INCLUDED
 
 class Sign_up{
-    cout<<"Unesite username"<<
+    //cout<<"Unesite username"<<
 
 };
 
