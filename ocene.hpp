@@ -10,9 +10,11 @@ class Ocene{
         int voice_acting;
 
     public:
-        int average(){
+        double average(){
             return (animacija+detalji+prica+voice_acting)/4;
         }
+
+        friend ostream& operator<<(ostream& izlaz, const Ocene& o);
 };
 
 #endif // OCENE_HPP_INCLUDED

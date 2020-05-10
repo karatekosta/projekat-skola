@@ -23,9 +23,36 @@ class Anime{
         Anime_facts facts;
         Korisnik korisnik1;
         string komentar;
+        static int brojAnimea;
 
     public:
-        Anime()
+        Anime(string ia, string zp, int a, int d, int p, int va, int be, int bs, int de, Zanrovi z, string oz, string mo, string dObjave, bool bnrp, string eg, string plia, string voa){
+            proizvodjac1.ime_autora=ia;
+            proizvodjac1.zemlja_porekla=zp;
+            ocene1.animacija=a;
+            ocene1.detalji=d;
+            ocene1.prica=p;
+            ocene1.voice_acting=va;
+            serija1.broj_epizoda=be;
+            serija1.broj_sezona=bs;
+            serija1.duzina_epizode=de;
+            zanr1.zanr1=z;
+            zanr1.opis_zanra=oz;
+            release1.mesto_objave=mo;
+            release1.datum_objave=dObjave;
+            facts.bazirano_na_realnoj_prici;
+            facts.easter_eggs=eg;
+            facts.prave_lokacije_iz_animea=plia;
+            facts.vreme_odvijanja_anime=voa;
+            {brojAnimea++}
+        }
+        void ispisiBrojAnimea(){
+            cout << brojAnimea <<endl;
+        }
+        void ispisAnime(){
+
+
+        }
 };
 
 #endif // ANIME_HPP_INCLUDED
