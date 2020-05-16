@@ -19,6 +19,11 @@ class Anime_info{
             jezik="";
             zavrseno=false;
         }
+
+        virtual void ispisImeJezik(){
+            cout<<"Ime animea: " << ime <<endl;
+            cout<<"Jezik: " << jezik <<endl;
+        }
 };
 
 #endif // ANIME_INFO_HPP_INCLUDED

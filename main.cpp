@@ -9,6 +9,7 @@
 #include "proizvodjac.hpp"
 #include "release.hpp"
 #include "zanr.hpp"
+#include <vector>
 
 
 using namespace std;
@@ -47,12 +48,25 @@ ostream& operator<<(ostream& izlaz, const Proizvodjac& o){
 
 int main()
 {
+    /*Anime_info an1;
+    Anime_film af1;
+
+    vector<Anime_info> *ai;
+    ai.push_back(&an1);
+    ai.push_back(&af1);
+    for(auto it=ai.begin(); it<ai.end(); it++){
+        (*it)->ispisImeJezik();
+    }*/ //ne znam zasto ne radi
+
+
+
     /*funkcionalnost-   1. dodavanje anime(popunjavanje svih klasa osim komentara-Korisnik mora biti admin)
                         2. user dodaje komentar na odredjeni anime()*/
         //Korisnik().registracija();
-        Korisnik k1("Kosta", "Kole", "1234");
-        //k1.registracija();
-        k1.upisiSignUp("korisnici.txt");
-        k1.ispisiSignUp("korisnici.txt");
+        //Korisnik k1("Kosta", "Kole", "1234");
+        //Korisnik k2;
+        //k2.registracija();
+        //k1.upisiSignUp("korisnici.txt");
+        //k2.ispisiSignUp("korisnici.txt");
     return 0;
 }

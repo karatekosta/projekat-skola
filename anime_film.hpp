@@ -4,7 +4,7 @@
 
 class Anime_film: public Anime_info{
 
-    private:
+    protected:
         double duzina_filma;
         Anime_info info;
     public:
@@ -22,9 +22,9 @@ class Anime_film: public Anime_info{
             zavrseno=z;
         }
 
-        void ispisiFilm(){
-
-
+        void ispis(){
+            Anime_info::ispisImeJezik();
+            cout<< "Duzina filma: " << duzina_filma << endl;
         }
 
             void duzina(){

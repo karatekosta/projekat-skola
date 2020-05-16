@@ -4,7 +4,7 @@
 
 class Anime_serija: protected Anime_info{
 
-    private:
+    protected:
         int broj_sezona;
         int broj_epizoda;
         double duzina_epizode;

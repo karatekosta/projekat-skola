@@ -3,7 +3,7 @@
 
 class Ocene{
 
-    private:
+    protected:
         int animacija;
         int detalji;
         int prica;

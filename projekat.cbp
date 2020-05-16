@@ -39,11 +39,11 @@
 		<Unit filename="anime_serija.hpp" />
 		<Unit filename="korisnik.hpp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="namespace.hpp" />
 		<Unit filename="ocene.hpp" />
 		<Unit filename="proizvodjac.hpp" />
 		<Unit filename="release.hpp" />
 		<Unit filename="sign up.hpp" />
+		<Unit filename="site.hpp" />
 		<Unit filename="zanr.hpp" />
 		<Extensions>
 			<code_completion />

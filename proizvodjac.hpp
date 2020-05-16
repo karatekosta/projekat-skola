@@ -3,7 +3,7 @@
 
 class Proizvodjac{
 
-    private:
+    protected:
         string ime_autora;
         string zemlja_porekla;
     public:

@@ -5,7 +5,7 @@ enum Zanrovi{komedija, tragedija, mystery, action, sci_fi, sports, romance, ecch
 
 class Zanr{
 
-    private:
+    protected:
         Zanrovi zanr1;
         int popularnost_zanra;
         string opis_zanra;
