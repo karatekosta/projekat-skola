@@ -2,20 +2,36 @@
 #define SITE_HPP_INCLUDED
 #include <vector>
 #include "ANIME.hpp"
-#include "korisnik.hpp"
+#include "osoba.hpp"
 
 class Site{
     protected:
             vector <Anime> a1;
-            vector <Korisnik> k1;
+            vector <Osoba> k1;
+            Osoba* trenutniKorisnik;
+            bool logedIn;
     public:
 
-        void dodajAnime(){
-            Anime a(imeAnime, ia, zp, a, d, p, va, be, bs, de, z, oz, mo, dObjave, bnrp, eg, plia, voa, df);
-            a1.push_back(a);
+        bool logIn(string username, string password){
+            bool nasao=false;
+
+            for(int i=0; i<k1.size(); i++){
+                if(k1[i].getUsername()==username){
+                    if(k1[i].getSecretPassword()==password){
+                        nasao = true;
+                        logedIn=true;
+                        trenutniKorisnik=&(k1[i]);
+                    }
+                }
+            }
+            return nasao;
         }
 
-        void izbaciPoslednji(vector<Anime> &a1){
+        void logOut(){
+            logedIn=false;
+        }
+
+        void izbaciPoslednji(){
                 a1.pop_back();
         }
 
@@ -33,17 +49,18 @@ class Site{
                 (*it)->ispisAnime();
         }
 
-        void nadjiAnime(vector<Anime> &a1, string ime){
+        Anime nadjiAnime(string ime){
             bool nasao = false;
             for(int i=0; i<a1.size(); i++){
-                if(a1[i]==ime){
+                if(a1[i].getIme()==ime){
                     cout<<"Postoji anime"<<endl;
                     nasao = true;
+                    return a1[i];
                 }
             }
             if(!nasao)
-                cout<<"Nema tog broja"<<endl;
-        }
+                cout<<"Nema tog anime-a"<<endl;
+            }
 };
 
 

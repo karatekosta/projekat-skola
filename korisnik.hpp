@@ -1,37 +1,26 @@
 #ifndef KORISNIK_HPP_INCLUDED
 #define KORISNIK_HPP_INCLUDED
-#include "sign up.hpp"
+#include "osoba.hpp"
 #include <fstream>
 #include <string>
 
 using namespace std;
 
-class Korisnik{
+class Korisnik: public Osoba{
 
     protected:
-        string username;
-        string nickname;
-        string password;
-        bool Admin;
+        int brojPogledanihAnimea;
     public:
 
         Korisnik(){
-            username="";
             nickname="";
             password="";
-            Admin=false;
         }
 
-        Korisnik(string u, string n, string p){
-                username=u;
+        Korisnik(string n, string p){
                 nickname=n;
                 password=p;
             }
-
-
-        void setUsername(const string u){
-            username=u;
-        }
 
         void setNickname(const string n){
             nickname=n;
@@ -42,16 +31,13 @@ class Korisnik{
         }
 
         void registracija(){
-            // "Username: ">>  "/nNickname: ">> "/nPassword" >>
-            string u, n, p;
-            cout << "Username: " << endl;
-            cin >> u;
+
+            string n, p;
             cout << "Nickname: " << endl;
             cin >> n;
             cout << "Password: " << endl;
             cin >> p;
 
-            setUsername(u);
             setNickname(n);
             setPassword(p);
         }
@@ -59,7 +45,7 @@ class Korisnik{
         void upisiSignUp(string nazivFajla){
             ofstream outfile;
             outfile.open("korisnici.txt", std::ios_base::app);
-            outfile<< username << "," << nickname << "," << password<< "," <<endl;
+            outfile<< nickname << "," << password<< "," <<endl;
             outfile.close();
         }
 
@@ -73,6 +59,25 @@ class Korisnik{
                 }
                 infile.close();
                 }
+
+    string getPassword(){
+        return password;
+    }
+
+    bool izmeniTekstKomentara(Komentar& k, string& noviTekst){
+
+        bool uspesno = false;
+        if(k.getKorisnik() == nickname){
+            k.setTekst(noviTekst, nickname);
+            uspesno = true;
+       }
+       return uspesno;
+
+    }
+
+    int getTip(){
+            return 0;
+        }
 };
 
 #endif // KORISNIK_HPP_INCLUDED

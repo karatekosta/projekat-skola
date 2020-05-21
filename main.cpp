@@ -14,6 +14,59 @@
 
 using namespace std;
 
+void dodajAnime(){
+    Proizvodjac p;
+    Ocene o;
+    Anime_serija as;
+    Zanr z;
+    Release r;
+    string ime, ime_autora, zemlja_porekla, opis_zanra, mesto_objave, datum_objave;
+    int broj_epizoda, broj_sezona, duzina_epizode, ocena_animacija, ocena_detalji, ocena_prica, ocena_voice_acting;
+
+    cout << "Unesite ime: " << endl;
+    cin >> ime;
+    //as.setIme(ime);
+    cout << "Unesite ime autora: " << endl;
+    cin >> ime_autora;
+    p.setIme(ime_autora);
+    cout << "Unesite zemlju porekla: " << endl << endl;
+    cin >> zemlja_porekla;
+    p.setZemlja(zemlja_porekla);
+    cout << "OCENE" << endl;
+    cout << "Unesite ocenu za animaciju: " << endl;
+    cin >> ocena_animacija;
+    o.setAnimacija(ocena_animacija);
+    cout << "Unesite ocenu za detalje: " << endl;;
+    cin >> ocena_detalji;
+    o.setDetalji(ocena_detalji);
+    cout << "Unesite ocenu za pricu: " << endl;
+    cin >> ocena_prica;
+    o.setPrica(ocena_prica);
+    cout << "Unesite ocenu za voice acting: " << endl;
+    cin >> ocena_voice_acting;
+    o.setVoice(ocena_voice_acting);
+    cout << "Unesite broj epizoda: " << endl;
+    cin >> broj_epizoda;
+    as.setEpizoda(broj_epizoda);
+    cout << "Unesite broj sezona: " << endl;
+    cin >> broj_sezona;
+    as.setSezona(broj_sezona);
+    cout << "Unesite duzinu jedne epizode: " << endl;
+    cin >> duzina_epizode;
+    as.setDuzinaEpizode(duzina_epizode);
+    //cout << "Unesite zanr: "; //imam enum za zanr
+    //cin >> zanr2;
+    cout << "Unesite opis zanra: " << endl;
+    cin >> opis_zanra;
+    z.setOpis(opis_zanra);
+    cout << "Unesite mesto objave: " << endl;
+    cin >> mesto_objave;
+    r.setMesto(mesto_objave);
+    cout << "Unesite datum objave: " << endl;
+    cin >> datum_objave;
+    r.setDatum(datum_objave);
+
+}
 ostream& operator<<(ostream& izlaz, const Ocene& o){
     izlaz<<"Ocene:"<<endl;
     izlaz<<"Animacija: "<<o.animacija<<endl;
@@ -48,22 +101,23 @@ ostream& operator<<(ostream& izlaz, const Proizvodjac& o){
 
 int main()
 {
-    /*Anime_info an1;
-    Anime_film af1;
+    /*funkcionalnost-   1. dodavanje anime(popunjavanje svih klasa osim komentara-Korisnik mora biti admin)
+                        2. user dodaje komentar na odredjeni anime()*/
 
-    vector<Anime_info> *ai;
+
+
+    Anime_info an1("Ime", "Engleski, Japanski", false);
+    Anime_film af1(120, "Ime", "Engleski, Japanski", false);
+
+    vector<Anime_info*> ai;
     ai.push_back(&an1);
     ai.push_back(&af1);
     for(auto it=ai.begin(); it<ai.end(); it++){
         (*it)->ispisImeJezik();
-    }*/ //ne znam zasto ne radi
+    }
 
-
-
-    /*funkcionalnost-   1. dodavanje anime(popunjavanje svih klasa osim komentara-Korisnik mora biti admin)
-                        2. user dodaje komentar na odredjeni anime()*/
         //Korisnik().registracija();
-        //Korisnik k1("Kosta", "Kole", "1234");
+        //Korisnik k1("Kole", "1234");
         //Korisnik k2;
         //k2.registracija();
         //k1.upisiSignUp("korisnici.txt");

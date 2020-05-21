@@ -33,16 +33,18 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="ANIME.hpp" />
+		<Unit filename="Admin.hpp" />
 		<Unit filename="anime_facts.hpp" />
 		<Unit filename="anime_film.hpp" />
 		<Unit filename="anime_info.hpp" />
 		<Unit filename="anime_serija.hpp" />
+		<Unit filename="komentar.hpp" />
 		<Unit filename="korisnik.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="ocene.hpp" />
+		<Unit filename="osoba.hpp" />
 		<Unit filename="proizvodjac.hpp" />
 		<Unit filename="release.hpp" />
-		<Unit filename="sign up.hpp" />
 		<Unit filename="site.hpp" />
 		<Unit filename="zanr.hpp" />
 		<Extensions>

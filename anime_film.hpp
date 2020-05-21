@@ -6,7 +6,7 @@ class Anime_film: public Anime_info{
 
     protected:
         double duzina_filma;
-        Anime_info info;
+
     public:
         Anime_film(){
             duzina_filma=0;
@@ -15,11 +15,19 @@ class Anime_film: public Anime_info{
             zavrseno=false;
         }
 
-        Anime_film(double df, string i, string j, bool z): info(i, j, z){
+        Anime_film(double df, string i, string j, bool z): Anime_info(i, j, z){
             duzina_filma=df;
             ime=i;
             jezik=j;
             zavrseno=z;
+        }
+
+        double getDuzinaFilma(){
+            return duzina_filma;
+        }
+
+        void setDuzinaFilma(const double df){
+            duzina_filma=df;
         }
 
         void ispis(){

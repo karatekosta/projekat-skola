@@ -20,6 +20,30 @@ class Anime_info{
             zavrseno=false;
         }
 
+        string getIme(){
+            return ime;
+        }
+
+        string getJezik(){
+            return jezik;
+        }
+
+        bool getZavrseno(){
+            return zavrseno;
+        }
+
+        void setIme(const string i){
+            ime=i;
+        }
+
+        void setJezik(const string j){
+            jezik=j;
+        }
+
+        void setZavrseno(const bool z){
+            zavrseno=z;
+        }
+
         virtual void ispisImeJezik(){
             cout<<"Ime animea: " << ime <<endl;
             cout<<"Jezik: " << jezik <<endl;

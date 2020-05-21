@@ -12,6 +12,27 @@ class Proizvodjac{
             zemlja_porekla="Japan";
         }
 
+        Proizvodjac(string ia, string zp){
+            ime_autora=ia;
+            zemlja_porekla=zp;
+        }
+
+        string getImeAutora(){
+            return ime_autora;
+        }
+
+        string getZemlja(){
+            return zemlja_porekla;
+        }
+
+        void setIme(const string ia){
+            ime_autora=ia;
+        }
+
+        void setZemlja(const string zp){
+            zemlja_porekla=zp;
+        }
+
         friend ostream& operator<<(ostream& izlaz, const Proizvodjac& o);
 };
 

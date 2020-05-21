@@ -7,8 +7,67 @@ class Zanr{
 
     protected:
         Zanrovi zanr1;
-        int popularnost_zanra;
         string opis_zanra;
+    public:
+        //metoda ispisi zanr, switch case
+        Zanr(){
+        zanr1=action;
+        opis_zanra="Nema opisa";
+        }
+
+        Zanr(Zanrovi z, string o){
+            zanr1=z;
+            opis_zanra=o;
+        }
+
+        void setOpis(const string o){
+            opis_zanra=o;
+        }
+
+        void setZanr(const Zanrovi z){
+            zanr1=z;
+        }
+
+        string getOpis(){
+            return opis_zanra;
+        }
+
+        string getZanr(){
+            string vrednost;
+            switch(zanr1){
+                case komedija:
+                    vrednost="komedija";
+                    break;
+                case tragedija:
+                    vrednost="tragedija";
+                    break;
+                case mystery:
+                    vrednost="mystery";
+                    break;
+                case action:
+                    vrednost="action";
+                    break;
+                case sci_fi:
+                    vrednost="sci_fi";
+                    break;
+                case sports:
+                    vrednost="sports";
+                    break;
+                case romance:
+                    vrednost="romance";
+                    break;
+                case ecchi:
+                    vrednost="ecchi";
+                    break;
+                case shonen:
+                    vrednost="shonen";
+                    break;
+                default: vrednost="Nema zanr";
+                    break;
+            }
+            return vrednost;
+        }
+
 };
 
 #endif // ZANR_HPP_INCLUDED

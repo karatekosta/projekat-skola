@@ -23,7 +23,41 @@ class Anime_facts{
             vreme_odvijanja_anime=voa;
         }
 
+        string getEaster(){
+            return easter_eggs;
+        }
+
+        string getPLIA(){
+            return prave_lokacije_iz_animea;
+        }
+
+        string getVOA(){
+            return vreme_odvijanja_anime;
+        }
+
+        bool getBNRP(){
+            return bazirano_na_realnoj_prici;
+        }
+
+        void setBNRP(const bool bnrp){
+            bazirano_na_realnoj_prici=bnrp;
+        }
+
+        void setEaster(const string e){
+            easter_eggs=e;
+        }
+
+        void setPLIA(const string p){
+            prave_lokacije_iz_animea=p;
+        }
+
+        void setVOA(const double v){
+            vreme_odvijanja_anime=v;
+        }
+
         friend ostream& operator<<(ostream& izlaz, const Anime_facts& o);
+
+
 };
 
 #endif // ANIME_FACTS_HPP_INCLUDED
