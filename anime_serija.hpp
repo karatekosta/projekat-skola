@@ -2,7 +2,7 @@
 #define ANIME_SERIJA_HPP_INCLUDED
 #include "anime_info.hpp"
 
-class Anime_serija: protected Anime_info{
+class Anime_serija: public Anime_info{
 
     protected:
         int broj_sezona;

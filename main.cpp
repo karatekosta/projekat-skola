@@ -2,17 +2,17 @@
 #include "korisnik.hpp"
 #include "anime_facts.hpp"
 #include "anime_film.hpp"
-#include "anime_info.hpp"
 #include "anime_serija.hpp"
 #include "korisnik.hpp"
 #include "ocene.hpp"
 #include "proizvodjac.hpp"
 #include "release.hpp"
 #include "zanr.hpp"
+#include "site.hpp"
 #include <vector>
 
 
-using namespace std;
+//using namespace std;
 
 void dodajAnime(){
     Proizvodjac p;
@@ -57,7 +57,7 @@ void dodajAnime(){
     cout << "Izaberite zanr" << endl;
     cout << "1. Komedija\n2. Tragedija\n3. Mystery\n4. Action\n5. Sci-fi\n6. Sports\n7. Romance\n8. Ecchi\n9. Shonen" << endl;
 
-    cin >> zanr2;
+    //cin >> zanr2;
     cout << "Unesite opis zanra: " << endl;
     cin >> opis_zanra;
     z.setOpis(opis_zanra);
@@ -103,7 +103,7 @@ ostream& operator<<(ostream& izlaz, const Proizvodjac& o){
 
 void meni(){
     Korisnik k;
-
+    site s;
     int broj;
     do{
         cout<<"*************************************"<<endl;
@@ -113,20 +113,23 @@ void meni(){
         cout<<"0. Izlaz" <<endl;
         cout<<"*************************************"<<endl;
 
+        cout<<"> ";
+        cin>>broj;
+
         switch(broj){
             case 1:
-            k.registracija();
-            k.upisiSignUp("korisnici.txt");
-            break;
+                k.registracija();
+                k.upisiSignUp("korisnici.txt");
+                break;
 
             case 2:
-                ;
+
                 break;
-            }
+
             case 0:
                 return;
-
-    }while(broj!=0)
+        }
+    }while(broj!=0);
 
 }
 int main()
@@ -145,12 +148,12 @@ int main()
     for(auto it=ai.begin(); it<ai.end(); it++){
         (*it)->ispisImeJezik();
     }
-
+    meni();
         //Korisnik().registracija();
-        Korisnik k1();
+        //Korisnik k1();
         //Korisnik k2;
         //k2.registracija();
-        k1.upisiSignUp("korisnici.txt");
+        //k1.upisiSignUp("korisnici.txt");
         //k2.ispisiSignUp("korisnici.txt");
     return 0;
 }

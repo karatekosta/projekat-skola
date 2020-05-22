@@ -29,32 +29,32 @@ class Anime{
         static int brojAnimea;
 
     public:
-        Anime(string imeAnime, string ia, string zp, int a, int d, int p, int va, int be, int bs, int de, Zanrovi z, string oz, string mo, string dObjave, bool bnrp, string eg, string plia, string voa){
-            //staviti setere
-            serija1.ime=imeAnime;
-            proizvodjac1.ime_autora=ia;
-            proizvodjac1.zemlja_porekla=zp;
-            ocene1.animacija=a;
-            ocene1.detalji=d;
-            ocene1.prica=p;
-            ocene1.voice_acting=va;
-            serija1.broj_epizoda=be;
-            serija1.broj_sezona=bs;
-            serija1.duzina_epizode=de;
-            zanr1.zanr1=z;
-            zanr1.opis_zanra=oz;
-            release1.mesto_objave=mo;
-            release1.datum_objave=dObjave;
-            facts.bazirano_na_realnoj_prici=bnrp;
-            facts.easter_eggs=eg;
-            facts.prave_lokacije_iz_animea=plia;
-            facts.vreme_odvijanja_anime=voa;
-            film1.duzina_filma=df;
-            {brojAnimea++}
+        Anime(string imeAnime, string ia, string zp, int a, int d, int p, int va, int be, int bs, int de, Zanrovi z, string oz, string mo, string dObjave, bool bnrp, string eg, string plia, string voa, double df){
+
+            serija1.setIme(imeAnime);
+            proizvodjac1.setIme(ia);
+            proizvodjac1.setZemlja(zp);
+            ocene1.setAnimacija(a);
+            ocene1.setDetalji(d);
+            ocene1.setPrica(p);
+            ocene1.setVoice(va);
+            serija1.setEpizoda(be);
+            serija1.setSezona(bs);
+            serija1.setDuzinaEpizode(de);
+            zanr1.setZanr(z);
+            zanr1.setOpis(oz);
+            release1.setMesto(mo);
+            release1.setDatum(dObjave);
+            facts.setBNRP(bnrp);
+            facts.setEaster(eg);
+            facts.setPLIA(plia);
+            facts.setVOA(voa);
+            film1.setDuzinaFilma(df);
+            {brojAnimea++;}
         }
 
         string getIme(){
-            return ime;
+            return serija1.getIme();
         }
 
 
@@ -68,20 +68,24 @@ class Anime{
 
         void ispisAnime(){
 
-            //staviti svugde getere
             cout<< "Ime: " << serija1.getIme() <<endl;
             cout<< "Ime autora: " << proizvodjac1.getImeAutora()<<endl;
             cout<< "Zemlja porekla: " << proizvodjac1.getZemlja() <<endl<<endl;
+
             cout<< "OCENE"<<endl;
-            /*cout<< "Animacija: " << ocene1.get <<endl;
-            cout<< "Detalji: " << ocene1.detalji <<endl;
-            cout<< "Prica: " << ocene1.prica <<endl;
-            cout<< "Voice acting: " << ocene1.voice_acting <<endl<<endl;*/
+            cout<< "Animacija: " << ocene1.getAnimacija() <<endl;
+            cout<< "Detalji: " << ocene1.getDetalji() <<endl;
+            cout<< "Prica: " << ocene1.getPrica() <<endl;
+            cout<< "Voice acting: " << ocene1.getVoice() <<endl;
+            cout<< "Ukupan broj ocena: " <<ocene1.getBrojOcena() <<endl<<endl;
+
             cout<< "Broj epizoda: " << serija1.getEpizoda() <<endl;
             cout<< "Broj sezona: " << serija1.getSezona() <<endl;
             cout<< "Duzina epizode: " << serija1.getDuzinaEpizode() <<endl<<endl;
+
             cout<< "Zanr: " << zanr1.getZanr() <<endl;
             cout<< "Opis zanra: " << zanr1.getOpis() <<endl<<endl;
+
             cout<< "Mesto objave: " << release1.getMesto() <<endl;
             cout<< "Datum objave: " << release1.getDatum() <<endl<<endl;
             cout<<facts<<endl;

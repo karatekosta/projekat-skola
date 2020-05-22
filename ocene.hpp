@@ -47,6 +47,25 @@ class Ocene{
             voice_acting=va;
         }
 
+        int getAnimacija(){
+            return animacija;
+        }
+
+        int getDetalji(){
+            return detalji;
+        }
+
+        int getPrica(){
+            return prica;
+        }
+
+        int getVoice(){
+            return voice_acting;
+        }
+
+        int getBrojOcena(){
+            return brojOcena;
+        }
         friend ostream& operator<<(ostream& izlaz, const Ocene& o);
 };
 

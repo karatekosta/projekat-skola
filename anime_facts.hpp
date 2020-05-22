@@ -51,7 +51,7 @@ class Anime_facts{
             prave_lokacije_iz_animea=p;
         }
 
-        void setVOA(const double v){
+        void setVOA(const string v){
             vreme_odvijanja_anime=v;
         }
 
