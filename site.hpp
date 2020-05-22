@@ -23,7 +23,7 @@ class Site{
 
         void dodajAnime(Anime a){
 
-            if(logedIn){
+            if(logedIn==true){
 
                 cout<<trenutniKorisnik->getTip()<<endl;
                 if(trenutniKorisnik->getTip() == "admin"){
@@ -54,7 +54,6 @@ class Site{
 
             for(int j=0; j<i; j++){
                 k.ucitajSaFajla("korisnici.txt", j+1);
-               // cout<<"J je : "<<j<<endl;
                 k.ispis();
                 k1.push_back(k);
 
@@ -130,7 +129,7 @@ class Site{
                     if(a1[i].getIme()==imeAnime){
                         cout<<"Postoji anime"<<endl;
                         nasao = true;
-                        Komentar k(*trenutniKorisnik.getNickname(), tekstKomentara, datum);
+                        Komentar k(trenutniKorisnik->getNickname(), tekstKomentara, datum);
                         a1[i].dodajKomentar(k);
 
                         cout<<"Dodat komentar"<<endl;

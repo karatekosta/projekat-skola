@@ -114,6 +114,7 @@ void meni(Site& site){
         cout<<"4. Dodaj anime" <<endl;
         cout<<"5. Odjavljivanje" <<endl;
         cout<<"6. Dodaj komentar" <<endl;
+        cout<<"7. Obrisi anime" <<endl;
         cout<<"0. Izlaz" <<endl;
         cout<<"*************************************"<<endl;
 
@@ -176,6 +177,7 @@ void meni(Site& site){
             case 5 :
 
                 site.logOut();
+                break;
 
             case 6 :
 
@@ -190,6 +192,13 @@ void meni(Site& site){
                     cout<<"Postavljen komentar"<<endl;
                 else
                     cout<<"Nije postavljen komentar"<<endl;
+                break;
+
+            case 7:
+                cout<<"Unesite anime koji zelite da obrisete" <<endl;
+                cin>>nazivAnimea;
+                site.izbaciOdredjeni(nazivAnimea);
+                break;
 
             default:
                 break;

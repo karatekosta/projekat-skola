@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1590176326 source:c:\users\kosta\desktop\projekat-skola\main.cpp
+1590180883 source:c:\users\kosta\desktop\projekat-skola\main.cpp
 	<iostream>
 	"korisnik.hpp"
 	"anime_facts.hpp"
@@ -107,7 +107,7 @@
 	<vector>
 	"komentar.hpp"
 
-1590177843 c:\users\kosta\desktop\projekat-skola\site.hpp
+1590181006 c:\users\kosta\desktop\projekat-skola\site.hpp
 	<vector>
 	"ANIME.hpp"
 	"osoba.hpp"
