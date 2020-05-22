@@ -21,6 +21,17 @@ class Site{
             ucitajKorisnike();
         }
 
+        bool getLogedIn(){
+            return logedIn;
+        }
+
+        bool isAdmin(){
+            if(trenutniKorisnik->getTip()=="admin")
+                return true;
+            else
+                return false;
+        }
+
         void dodajAnime(Anime a){
 
             if(logedIn==true){
@@ -54,7 +65,7 @@ class Site{
 
             for(int j=0; j<i; j++){
                 k.ucitajSaFajla("korisnici.txt", j+1);
-                k.ispis();
+                //k.ispis();
                 k1.push_back(k);
 
             }
@@ -80,6 +91,7 @@ class Site{
 
         void logOut(){
             logedIn=false;
+            trenutniKorisnik = NULL;
         }
 
         void izbaciPoslednji(){

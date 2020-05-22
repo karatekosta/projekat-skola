@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1590180883 source:c:\users\kosta\desktop\projekat-skola\main.cpp
+1590149834 source:c:\users\kosta\desktop\projekat-skola\main.cpp
 	<iostream>
 	"korisnik.hpp"
 	"anime_facts.hpp"
@@ -13,38 +13,38 @@
 	"site.hpp"
 	<vector>
 
-1590140774 c:\users\kosta\desktop\projekat-skola\korisnik.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\korisnik.hpp
 	"osoba.hpp"
 	<fstream>
 	<string>
 
-1590136732 c:\users\kosta\desktop\projekat-skola\osoba.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\osoba.hpp
 	"komentar.hpp"
 	<vector>
 
-1590120332 c:\users\kosta\desktop\projekat-skola\komentar.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\komentar.hpp
 	<string.h>
 
-1590120472 c:\users\kosta\desktop\projekat-skola\anime_facts.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\anime_facts.hpp
 	<string.h>
 
-1590117178 c:\users\kosta\desktop\projekat-skola\anime_film.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\anime_film.hpp
 	"anime_info.hpp"
 
-1590139128 c:\users\kosta\desktop\projekat-skola\anime_info.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\anime_info.hpp
 
-1590117178 c:\users\kosta\desktop\projekat-skola\anime_serija.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\anime_serija.hpp
 	"anime_info.hpp"
 
-1590120374 c:\users\kosta\desktop\projekat-skola\ocene.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\ocene.hpp
 
-1590120406 c:\users\kosta\desktop\projekat-skola\proizvodjac.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\proizvodjac.hpp
 
-1590117178 c:\users\kosta\desktop\projekat-skola\release.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\release.hpp
 
-1590139394 c:\users\kosta\desktop\projekat-skola\zanr.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\zanr.hpp
 
-1590173314 source:c:\users\milan\onedrive\desktop\projekat-skola-master\main.cpp
+1590181639 source:c:\users\milan\onedrive\desktop\projekat-skola-master\main.cpp
 	<iostream>
 	"korisnik.hpp"
 	"anime_facts.hpp"
@@ -58,43 +58,44 @@
 	"site.hpp"
 	<vector>
 
-1590173175 c:\users\milan\onedrive\desktop\projekat-skola-master\korisnik.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\korisnik.hpp
 	"osoba.hpp"
 	<fstream>
 	<string>
 
-1590169132 c:\users\milan\onedrive\desktop\projekat-skola-master\osoba.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\osoba.hpp
 	"komentar.hpp"
 	<vector>
 
-1590152732 c:\users\milan\onedrive\desktop\projekat-skola-master\komentar.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\komentar.hpp
 	<string.h>
 
-1590152872 c:\users\milan\onedrive\desktop\projekat-skola-master\anime_facts.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\anime_facts.hpp
 	<string.h>
 
-1590149578 c:\users\milan\onedrive\desktop\projekat-skola-master\anime_film.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\anime_film.hpp
 	"anime_info.hpp"
 
-1590171529 c:\users\milan\onedrive\desktop\projekat-skola-master\anime_info.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\anime_info.hpp
 
-1590149578 c:\users\milan\onedrive\desktop\projekat-skola-master\anime_serija.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\anime_serija.hpp
 	"anime_info.hpp"
 
-1590152774 c:\users\milan\onedrive\desktop\projekat-skola-master\ocene.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\ocene.hpp
 
-1590152807 c:\users\milan\onedrive\desktop\projekat-skola-master\proizvodjac.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\proizvodjac.hpp
 
-1590149578 c:\users\milan\onedrive\desktop\projekat-skola-master\release.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\release.hpp
 
-1590171794 c:\users\milan\onedrive\desktop\projekat-skola-master\zanr.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\zanr.hpp
 
-1590173417 c:\users\milan\onedrive\desktop\projekat-skola-master\site.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\site.hpp
 	<vector>
 	"ANIME.hpp"
 	"osoba.hpp"
+	"komentar.hpp"
 
-1590173270 c:\users\milan\onedrive\desktop\projekat-skola-master\anime.hpp
+1590181639 c:\users\milan\onedrive\desktop\projekat-skola-master\anime.hpp
 	"anime_facts.hpp"
 	"anime_film.hpp"
 	"anime_info.hpp"
@@ -107,13 +108,13 @@
 	<vector>
 	"komentar.hpp"
 
-1590181006 c:\users\kosta\desktop\projekat-skola\site.hpp
+1590183014 c:\users\kosta\desktop\projekat-skola\site.hpp
 	<vector>
 	"ANIME.hpp"
 	"osoba.hpp"
 	"komentar.hpp"
 
-1590140870 c:\users\kosta\desktop\projekat-skola\anime.hpp
+1590149238 c:\users\kosta\desktop\projekat-skola\anime.hpp
 	"anime_facts.hpp"
 	"anime_film.hpp"
 	"anime_info.hpp"

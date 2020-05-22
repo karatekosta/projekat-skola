@@ -161,43 +161,59 @@ void meni(Site& site){
 
             case 3 :
 
-                cout<<"Unesite ime zeljenog anime-a"<<endl;
-                cin>>nazivAnimea;
-                nasao= site.nadjiAnime(nazivAnimea);
+                if(site.getLogedIn()){
+                    cout<<"Unesite ime zeljenog anime-a"<<endl;
+                    cin>>nazivAnimea;
+                    nasao= site.nadjiAnime(nazivAnimea);
+                }else
+                    cout<<"Morate biti prijavljeni da bi obavili ovu funkciju"<<endl;
 
 
                 break;
 
             case 4 :
-                anime = dodajAnime();
-                site.dodajAnime(anime);
+
+                 if(site.getLogedIn()&& site.isAdmin()){
+                    anime = dodajAnime();
+                    site.dodajAnime(anime);
+                 }else
+                    cout<<"Morate biti prijavljeni kao admin da bi obavili ovu funkciju"<<endl;
 
                 break;
 
             case 5 :
-
-                site.logOut();
+                if(site.getLogedIn()){
+                    site.logOut();
+                }else
+                    cout<<"Morate biti prijavljeni da bi obavili ovu funkciju"<<endl;
                 break;
 
             case 6 :
 
-                cout<<"Unesite ime animea kojem zelite ostaviti komentar : "<<endl;
-                cin>>nazivAnimea;
-                cout<<"Unesite tekst komentara : "<<endl;
-                cin>>tekst;
-                cout<<"Unesite datum komentara : "<<endl;
-                cin>> datum;
-                uspesno = site.dodajKomentar(nazivAnimea, tekst, datum);
-                if(uspesno)
-                    cout<<"Postavljen komentar"<<endl;
-                else
-                    cout<<"Nije postavljen komentar"<<endl;
+                 if(site.getLogedIn()){
+                    cout<<"Unesite ime animea kojem zelite ostaviti komentar : "<<endl;
+                    cin>>nazivAnimea;
+                    cout<<"Unesite tekst komentara : "<<endl;
+                    cin>>tekst;
+                    cout<<"Unesite datum komentara : "<<endl;
+                    cin>> datum;
+                    uspesno = site.dodajKomentar(nazivAnimea, tekst, datum);
+                    if(uspesno)
+                        cout<<"Postavljen komentar"<<endl;
+                    else
+                        cout<<"Nije postavljen komentar"<<endl;
+                }else
+                    cout<<"Morate biti prijavljeni da bi obavili ovu funkciju"<<endl;
                 break;
 
             case 7:
-                cout<<"Unesite anime koji zelite da obrisete" <<endl;
-                cin>>nazivAnimea;
-                site.izbaciOdredjeni(nazivAnimea);
+
+                if(site.getLogedIn() && site.isAdmin()){
+                    cout<<"Unesite anime koji zelite da obrisete" <<endl;
+                    cin>>nazivAnimea;
+                    site.izbaciOdredjeni(nazivAnimea);
+                 }else
+                    cout<<"Morate biti prijavljeni kao admin da bi obavili ovu funkciju"<<endl;
                 break;
 
             default:
