@@ -38,8 +38,8 @@ public :
 
     }
 
-    int getTip(){
-            return 1;
+    string getTip(){
+            return tip;
         }
 
 };

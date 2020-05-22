@@ -1,7 +1,7 @@
 #ifndef ZANR_HPP_INCLUDED
 #define ZANR_HPP_INCLUDED
 
-enum Zanrovi{komedija, tragedija, mystery, action, sci_fi, sports, romance, ecchi, shonen};
+enum Zanrovi{komedija=1, tragedija, mystery, action, sci_fi, sports, romance, ecchi, shonen};
 
 class Zanr{
 
@@ -24,8 +24,43 @@ class Zanr{
             opis_zanra=o;
         }
 
-        void setZanr(const Zanrovi z){
-            zanr1=z;
+        void setZanr(int z){
+
+        Zanrovi vrednost ;
+
+           switch(z){
+                case komedija:
+                    vrednost=komedija;
+                    break;
+                case tragedija:
+                    vrednost=tragedija;
+                    break;
+                case mystery:
+                    vrednost=mystery;
+                    break;
+                case action:
+                    vrednost=action;
+                    break;
+                case sci_fi:
+                    vrednost=sci_fi;
+                    break;
+                case sports:
+                    vrednost=sports;
+                    break;
+                case romance:
+                    vrednost=romance;
+                    break;
+                case ecchi:
+                    vrednost=ecchi;
+                    break;
+                case shonen:
+                    vrednost=shonen;
+                    break;
+                default: vrednost=komedija;
+                    break;
+            }
+
+            zanr1=vrednost;
         }
 
         string getOpis(){

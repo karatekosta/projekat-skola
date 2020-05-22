@@ -3,24 +3,76 @@
 #include <vector>
 #include "ANIME.hpp"
 #include "osoba.hpp"
+#include "komentar.hpp"
+
+using namespace std;
 
 class Site{
     protected:
             vector <Anime> a1;
-            vector <Osoba> k1;
+            vector <Korisnik> k1;
             Osoba* trenutniKorisnik;
             bool logedIn;
     public:
+
+        Site(){
+            trenutniKorisnik = NULL;
+            logedIn = false;
+            ucitajKorisnike();
+        }
+
+        void dodajAnime(Anime a){
+
+            if(logedIn){
+
+                cout<<trenutniKorisnik->getTip()<<endl;
+                if(trenutniKorisnik->getTip() == "admin"){
+                     a1.push_back(a);
+                     cout<<"Uspesno dodat anime"<<endl;
+                     return;
+                }else if(trenutniKorisnik->getTip() == "obicni"){
+                    cout<<"Samo admin moze dodati anime"<<endl;
+                }
+
+            }else if(logedIn==false){
+                cout<<"Morate se registrovati kako bi dodali anime"<<endl;
+            }
+
+
+        }
+
+        void ucitajKorisnike(){
+            ifstream infile;
+            infile.open("korisnici.txt");
+            string linija;
+            int i = 0;
+            Korisnik k;
+            while ( getline (infile,linija) ){
+                    i++;
+            }
+            infile.close();
+
+            for(int j=0; j<i; j++){
+                k.ucitajSaFajla("korisnici.txt", j+1);
+               // cout<<"J je : "<<j<<endl;
+                k.ispis();
+                k1.push_back(k);
+
+            }
+        }
+
 
         bool logIn(string username, string password){
             bool nasao=false;
 
             for(int i=0; i<k1.size(); i++){
-                if(k1[i].getUsername()==username){
+                if(k1[i].getNickname()==username){
                     if(k1[i].getSecretPassword()==password){
+                        //k1[i].ispis();
                         nasao = true;
                         logedIn=true;
                         trenutniKorisnik=&(k1[i]);
+                        break;
                     }
                 }
             }
@@ -36,7 +88,7 @@ class Site{
         }
 
         void izbaciOdredjeni(string ime){
-            for(auto it=a1.begin(); it<a1.end; it++){
+            for(auto it=a1.begin(); it<a1.end(); it++){
                 if(ime==it->getIme()){
                     a1.erase(it);
                     cout<< "Nadjen anime" <<endl;
@@ -45,22 +97,56 @@ class Site{
         }
 
         void ispisiAnime(){
-            for (auto it=a1.begin(); it<a1.end(); it++){
-                (*it)->ispisAnime();
+                for (auto it=a1.begin(); it<a1.end(); it++){
+                    (*it).ispisAnime();
+            }
         }
 
-        Anime nadjiAnime(string ime){
-            bool nasao = false;
-            for(int i=0; i<a1.size(); i++){
-                if(a1[i].getIme()==ime){
-                    cout<<"Postoji anime"<<endl;
-                    nasao = true;
-                    return a1[i];
+        bool nadjiAnime(string ime){
+
+            if(logedIn){
+                bool nasao = false;
+                for(int i=0; i<a1.size(); i++){
+                    if(a1[i].getIme()==ime){
+                        cout<<"Postoji anime"<<endl;
+                        nasao = true;
+                        a1[i].ispisAnime();
+                    }
                 }
+
+                if(!nasao)
+                    cout<<"Nema tog anime-a"<<endl;
+                    return nasao;
             }
-            if(!nasao)
-                cout<<"Nema tog anime-a"<<endl;
+            return false;
+
+        }
+
+          bool dodajKomentar(string imeAnime, string tekstKomentara, string datum){
+
+            if(logedIn){
+                bool nasao = false;
+                for(int i=0; i<a1.size(); i++){
+                    if(a1[i].getIme()==imeAnime){
+                        cout<<"Postoji anime"<<endl;
+                        nasao = true;
+                        Komentar k(*trenutniKorisnik.getNickname(), tekstKomentara, datum);
+                        a1[i].dodajKomentar(k);
+
+                        cout<<"Dodat komentar"<<endl;
+
+                        //a1[i].ispisAnime();
+                    }
+                }
+
+                if(!nasao)
+                    cout<<"Nema tog anime-a"<<endl;
+                    return nasao;
             }
+            return false;
+
+        }
+
 };
 
 

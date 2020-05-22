@@ -12,21 +12,37 @@ class Osoba{
         string nickname;
         string password;
         vector <Komentar> komenari;
+        string tip;
 
 
     public :
         Osoba(): ime("Zarko"), prezime("Zarkovic"),nickname("Kul lik"), password("1234"){
         }
 
-        string getUser(){
+        string getNickname(){
             return nickname;
         }
 
-        virtual int getTip()=0;
+        virtual string getTip()=0;
 
         string getSecretPassword(){
             return password;
         }
+
+        void setIme(string i){
+            ime = i;
+        }
+
+         void setPrezime(string p){
+            prezime = p;
+        }
+
+        void setTip(string t){
+            tip = t;
+        }
+
+        string getIme(){return ime;}
+        string getPrezime(){return prezime;}
 
         virtual void ispis(){
               cout<<"Zovem se : " <<ime << " "<<prezime<<endl;

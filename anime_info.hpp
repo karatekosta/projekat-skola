@@ -32,15 +32,15 @@ class Anime_info{
             return zavrseno;
         }
 
-        void setIme(const string i){
+        void setIme( string i){
             ime=i;
         }
 
-        void setJezik(const string j){
+        void setJezik( string j){
             jezik=j;
         }
 
-        void setZavrseno(const bool z){
+        void setZavrseno( bool z){
             zavrseno=z;
         }
 

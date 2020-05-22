@@ -69,4 +69,14 @@ class Ocene{
         friend ostream& operator<<(ostream& izlaz, const Ocene& o);
 };
 
+ostream& operator<<(ostream& izlaz, const Ocene& o){
+    izlaz<<"Ocene:"<<endl;
+    izlaz<<"Animacija: "<<o.animacija<<endl;
+    izlaz<<"Detalji: "<<o.detalji<<endl;
+    izlaz<<"Prica: "<<o.prica<<endl;
+    izlaz<<"Voice acting: "<<o.voice_acting<<endl;
+    return izlaz;
+}
+
+
 #endif // OCENE_HPP_INCLUDED

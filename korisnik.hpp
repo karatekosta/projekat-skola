@@ -32,24 +32,98 @@ class Korisnik: public Osoba{
 
         void registracija(){
 
-            string n, p;
+            cout << "Ime: " << endl;
+            cin >> ime;
+            cout << "Prezime: " << endl;
+            cin >> prezime;
             cout << "Nickname: " << endl;
-            cin >> n;
+            cin >> nickname;
             cout << "Password: " << endl;
-            cin >> p;
+            cin >> password;
 
-            setNickname(n);
-            setPassword(p);
         }
 
         void upisiSignUp(string nazivFajla){
             ofstream outfile;
             outfile.open("korisnici.txt", std::ios_base::app);
-            outfile<< nickname << "," << password<< "," <<endl;
+            outfile<< nickname << "," << password<< ","<<ime<<","<<prezime<<","<<getTip() <<endl;
             outfile.close();
         }
 
-        void ispisiSignUp(string korisnici){
+        void ispis(){
+
+            cout<<"Ime : "<< ime<< " Prezime : "<<prezime<<" Nickname : "<<nickname<<" Password : " << password <<" Tip : "<< tip<<endl;
+        }
+
+        void ucitajSaFajla(string nazivFajla, int linija){
+            ifstream infile;
+            infile.open(nazivFajla);
+            string data;
+            int i = 0;
+            while(i<linija){
+                infile >> data;
+                i++;
+            }
+            int polje = 0;
+            int pozicija = 0;
+            int brojKaraktera = 0;
+
+            char buffer[30];
+
+            for (int i = 0; i < data.size(); i++){
+
+
+                if(data[i]==','){
+                    polje++;
+                    //cout<<"Pozicija : "<<pozicija<<" brojKaraktera : "<<brojKaraktera<<endl;
+                    if(polje==1){
+
+                        data.copy(buffer, brojKaraktera, pozicija);
+                        buffer[brojKaraktera]='\0';
+                        nickname = buffer; // Ako imas intove ili nesto drugo moraces raditi atoi ili odgovarajucu funkciju
+                        pozicija = brojKaraktera+1;
+                        brojKaraktera = -1; // Jer kasnije svakako imamo ++
+
+                    }else if(polje==2){
+
+                        data.copy(buffer,  brojKaraktera, pozicija);
+                        buffer[brojKaraktera]='\0';
+                        password = buffer;
+                        pozicija = pozicija + brojKaraktera + 1;
+                        brojKaraktera = -1;
+
+                    }else if(polje==3){
+
+                        data.copy(buffer,  brojKaraktera, pozicija);
+                        buffer[brojKaraktera]='\0';
+                        ime = buffer;
+                        pozicija = pozicija + brojKaraktera + 1;
+                        brojKaraktera = -1;
+
+                    }else if(polje==4){
+
+                        data.copy(buffer,  brojKaraktera, pozicija);
+                        buffer[brojKaraktera]='\0';
+                        prezime = buffer;
+                        pozicija = pozicija + brojKaraktera + 1;
+                        brojKaraktera = -1;
+
+                    }else{
+
+                        data.copy(buffer, brojKaraktera, pozicija);
+
+                        buffer[brojKaraktera]='\0';
+                        tip = buffer;
+
+                    }
+                }
+                brojKaraktera++;
+
+            }
+            infile.close();
+    }
+
+        void ispisiSignUp(){
             ifstream infile;
             infile.open("korisnici.txt");
             string linija;
@@ -75,8 +149,8 @@ class Korisnik: public Osoba{
 
     }
 
-    int getTip(){
-            return 0;
+    string getTip(){
+            return tip;
         }
 };
 

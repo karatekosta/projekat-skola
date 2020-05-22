@@ -36,4 +36,13 @@ class Proizvodjac{
         friend ostream& operator<<(ostream& izlaz, const Proizvodjac& o);
 };
 
+
+ostream& operator<<(ostream& izlaz, const Proizvodjac& o){
+    izlaz<<"Proizvodjac i zemlja porekla:"<<endl;
+    izlaz<<"Proizvodjac: "<<o.ime_autora<<endl;
+    izlaz<<"Detalji: "<<o.zemlja_porekla<<endl;
+
+    return izlaz;
+}
+
 #endif // PROIZVODJAC_HPP_INCLUDED

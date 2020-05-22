@@ -17,6 +17,9 @@
 
 class Anime{
 
+    public :
+        static int brojAnimea;
+
     protected:
         Proizvodjac proizvodjac1;
         Ocene ocene1;
@@ -26,10 +29,11 @@ class Anime{
         Release release1;
         Anime_facts facts;
         vector <Komentar> komentari;
-        static int brojAnimea;
+
 
     public:
-        Anime(string imeAnime, string ia, string zp, int a, int d, int p, int va, int be, int bs, int de, Zanrovi z, string oz, string mo, string dObjave, bool bnrp, string eg, string plia, string voa, double df){
+        Anime(){}
+        Anime(string imeAnime, string ia, string zp, int a, int d, int p, int va, int be, int bs, int de, int z, string oz, string mo, string dObjave, bool bnrp, string eg, string plia, string voa, double df){
 
             serija1.setIme(imeAnime);
             proizvodjac1.setIme(ia);
@@ -50,7 +54,7 @@ class Anime{
             facts.setPLIA(plia);
             facts.setVOA(voa);
             film1.setDuzinaFilma(df);
-            {brojAnimea++;}
+            Anime::brojAnimea++;
         }
 
         string getIme(){
@@ -110,5 +114,7 @@ class Anime{
             proizvodjac1.setZemlja(zemlja);
         }
 };
+
+int Anime::brojAnimea = 0;
 
 #endif // ANIME_HPP_INCLUDED

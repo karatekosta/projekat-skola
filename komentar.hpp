@@ -32,7 +32,7 @@ public :
     string getTeskt(){return tekst;}
     string getDatum(){return datum;}
     bool getMenjan(){return menjan;}
-    string setTekst(string t, string k){tekst = t; menjan = true; korisnik=k;}
+    void setTekst(string t, string k){tekst = t; menjan = true; korisnik=k;}
 
     void ispisiKomentar(){
         cout<<"Komenatar: " << tekst << endl << "By: " << korisnik << endl;
