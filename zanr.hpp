@@ -9,7 +9,7 @@ class Zanr{
         Zanrovi zanr1;
         string opis_zanra;
     public:
-        //metoda ispisi zanr, switch case
+        //metoda ispisi zanr
         Zanr(){
         zanr1=action;
         opis_zanra="Nema opisa";

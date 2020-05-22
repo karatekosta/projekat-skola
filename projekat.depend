@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1590002684 source:c:\users\kosta\desktop\projekat-skola\main.cpp
+1590009528 source:c:\users\kosta\desktop\projekat-skola\main.cpp
 	<iostream>
 	"korisnik.hpp"
 	"anime_facts.hpp"
@@ -35,11 +35,11 @@
 1590004863 c:\users\kosta\desktop\projekat-skola\anime_serija.hpp
 	"anime_info.hpp"
 
-1589998502 c:\users\kosta\desktop\projekat-skola\ocene.hpp
+1590007836 c:\users\kosta\desktop\projekat-skola\ocene.hpp
 
 1590005919 c:\users\kosta\desktop\projekat-skola\proizvodjac.hpp
 
 1590004561 c:\users\kosta\desktop\projekat-skola\release.hpp
 
-1589999815 c:\users\kosta\desktop\projekat-skola\zanr.hpp
+1590006902 c:\users\kosta\desktop\projekat-skola\zanr.hpp
 

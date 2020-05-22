@@ -54,8 +54,10 @@ void dodajAnime(){
     cout << "Unesite duzinu jedne epizode: " << endl;
     cin >> duzina_epizode;
     as.setDuzinaEpizode(duzina_epizode);
-    //cout << "Unesite zanr: "; //imam enum za zanr
-    //cin >> zanr2;
+    cout << "Izaberite zanr" << endl;
+    cout << "1. Komedija\n2. Tragedija\n3. Mystery\n4. Action\n5. Sci-fi\n6. Sports\n7. Romance\n8. Ecchi\n9. Shonen" << endl;
+
+    cin >> zanr2;
     cout << "Unesite opis zanra: " << endl;
     cin >> opis_zanra;
     z.setOpis(opis_zanra);
@@ -99,6 +101,34 @@ ostream& operator<<(ostream& izlaz, const Proizvodjac& o){
     return izlaz;
 }
 
+void meni(){
+    Korisnik k;
+
+    int broj;
+    do{
+        cout<<"*************************************"<<endl;
+        cout<<"1. Registracija"<<endl;
+        cout<<"2. Prijavljivanje"<<endl;
+        cout<<"3. Trazi anime" <<endl;
+        cout<<"0. Izlaz" <<endl;
+        cout<<"*************************************"<<endl;
+
+        switch(broj){
+            case 1:
+            k.registracija();
+            k.upisiSignUp("korisnici.txt");
+            break;
+
+            case 2:
+                ;
+                break;
+            }
+            case 0:
+                return;
+
+    }while(broj!=0)
+
+}
 int main()
 {
     /*funkcionalnost-   1. dodavanje anime(popunjavanje svih klasa osim komentara-Korisnik mora biti admin)
@@ -117,10 +147,10 @@ int main()
     }
 
         //Korisnik().registracija();
-        //Korisnik k1("Kole", "1234");
+        Korisnik k1();
         //Korisnik k2;
         //k2.registracija();
-        //k1.upisiSignUp("korisnici.txt");
+        k1.upisiSignUp("korisnici.txt");
         //k2.ispisiSignUp("korisnici.txt");
     return 0;
 }
